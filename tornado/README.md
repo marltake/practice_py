@@ -9,6 +9,8 @@ www.tornadoweb.org/en/stable/guide.html
     - Python 3.6.6 公式 msi
     - PowerShell(admin) pip install pipenv
     - PowerShell(>tornado) pipenv install tornado
+Z. PowerShell
+    - ctrl-Cで中断しない？
 ## 読んでみた
 - ch.3
     - tornado.web は NOT WSGI できなくはないけど、tornado らしさが制限される
@@ -35,3 +37,6 @@ www.tornadoweb.org/en/stable/guide.html
 - ch.2 hellow world
     - http://localhost:8888 でアクセスできた。
     - python に public network でアクセス可能の許可が必要だった
+- ch.5.1.5 web application
+    - story_links.py
+        - RequestHandler.write でページを書き出す
