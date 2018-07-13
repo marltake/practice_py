@@ -3,6 +3,12 @@ tornadoを使ってみる
 www.tornadoweb.org/en/stable/guide.html
 
 # やったこと
+## 練習環境
+1. ASUS B9440UA
+    - Windows 10 Pro にアップグレード
+    - Python 3.6.6 公式 msi
+    - PowerShell(admin) pip install pipenv
+    - PowerShell(>tornado) pipenv install tornado
 ## 読んでみた
 - ch.3
     - tornado.web は NOT WSGI できなくはないけど、tornado らしさが制限される
@@ -25,3 +31,7 @@ www.tornadoweb.org/en/stable/guide.html
         - return PLACE_HOLDER
         - deliver to A QUEUE
         - CALLBACK_REGISTRY? e.g. posix signals
+## 写経
+- ch.2 hellow world
+    - http://localhost:8888 でアクセスできた。
+    - python に public network でアクセス可能の許可が必要だった
