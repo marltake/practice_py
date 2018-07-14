@@ -38,5 +38,5 @@ Z. PowerShell
     - http://localhost:8888 でアクセスできた。
     - python に public network でアクセス可能の許可が必要だった
 - ch.5.1.5 web application
-    - story_links.py
+    - The application object: story_links.py
         - RequestHandler.write でページを書き出す

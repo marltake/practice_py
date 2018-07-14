@@ -18,9 +18,13 @@ class StoryHandler(RequestHandler):
 
 if __name__ == "__main__":
     db = 'dummy db. work nothing'
-    app = Application([
-        url(r"/", MainHandler),
-        url(r"/story/([0-9]+)", StoryHandler, dict(db=db), name="story")
+    app = Application([  # ncluding the routing table that maps requests to handlers.
+        # routing table is a list of URLSpec objects (or tuples)
+        url(r"/", MainHandler),  # at least a regular expression and a handler class
+        url(r"/story/([0-9]+)",  # the regular expression contains capturing groups, these groups are the path arguments and will be passed to the handler’s HTTP method
+            StoryHandler,
+            dict(db=db),  # If a dictionary is passed as the third element of the URLSpec, it supplies the initialization arguments which will be passed to RequestHandler.initialize.
+            name="story")  # the URLSpec may have a name, which will allow it to be used with RequestHandler.reverse_url.
         ])
     # dict 関数の keyword args が辞書の中身になる
     app.listen(8888)
